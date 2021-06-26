@@ -1,0 +1,117 @@
+
+html {
+    background: #fff;
+    font-size: 14px;
+    font-family: arial, sans-serif;
+}
+
+div.topnav {
+    display: inline;
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+a.leftnav {
+    float:left;
+}
+
+a {
+    float: center;
+}
+
+ul.rightnav {
+    float: right;
+    display:flex;
+    list-style-type: none;
+    
+}
+
+
+div.body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+img.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div.search-bar {
+    background: #fff;
+    display: flex;
+    border: 1px solid #dfe1e5;
+    box-shadow: none;
+    height: 44px;
+    margin: 0 auto; 
+
+}
+
+div.yt {
+    display: block;
+    margin: auto;
+    padding: 60px;
+    text-align: center;
+}
+
+img.ytpic {
+    width: 36px;
+    height: 25px;
+    vertical-align: middle;
+}
+
+a.yt {
+    color: #70757a;
+    text-decoration: none;
+}
+
+div.enviromessage {
+    background: #f2f2f2;;
+    display: block;         /* setting an element to a block element helps align the element and the text*/
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+a.enviro {
+   color: #70757a;
+}
+
+a.leftnav {
+    color: #222;
+
+}
+
+a.rightnav {
+    color: #222;
+}
+
+a {
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+div.bottom-nav {
+    display: flex;
+    background: #f2f2f2;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    
+}
+
+a.bottomn {
+    color: #70757a;
+}
+
+
+
+
+
