@@ -1,40 +1,35 @@
 html {
-    background: #fff;
+
     font-size: 14px;
     font-family: arial, sans-serif;
 }
 
 
-div.topnav {
+div.topnavbar {
     display: inline;
 }
-a.leftnav {
-    color: #222;
-    text-decoration: none;
-    text-transform: capitalize;
 
-}
-a.rightnav {
-    color: #222;
-    text-decoration: none;
-    text-transform: capitalize;
-}
 ul {
     display: flex;
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
-ul:hover {
-    text-decoration: underline;
+
+
+a.leftnav {
+    color: #222;
+
 }
+
+a.rightnav {
+    color: #222;
+}
+
+
 svg.gdots {
     fill: #5f6368;
 }
-svg.gdots:hover {
-    background: #f2f2f2;
-}
-
 
 
 
@@ -42,48 +37,63 @@ svg.gdots:hover {
 div.body {
     display: flex;
     flex-direction: column;
-    align-items: center; /* this might be interfering with 'mag' */
+    align-items: center;
 }
+
+
+
 img.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 25px; 
 }
+
+
 svg.mag {
     display: flex;
     fill: #9aa0a6; /* color didn't change the color for this SVG art but fill works */
     width: 20px;
     height: 20px;
 }
+
+
 div.search-bar {
     background: #fff;
+/* Both border: and outline: none still leaves black line in fill-in box */
+/*  display: flex;  Not sure what this does yet so I comment out */
+/*  border: 1px solid #dfe1e5; */ 
+    /* */
     height: 50px; 
 
 }
+
+
 input#searchbar {
+
     padding: 10px;
     border: 1px solid #dfe1e5;
     border-radius: 25px;
     width: 550px;
 }
+
+
 input#searchbar:hover {
     box-shadow: 0 1px 6px rgba(32,33,36,.28);
 }
+
+
 button {
-    position: relative;
     background-color: #f8f9fa;
     border: 1px solid #f8f9fa;
-    border-radius: 5px;
     font-family: arial, sans-serif;
     font-size: 14px;
     margin: 11px 4px;
-    color: #3c4043;
+    color: #0091ff;
     padding: 0 16px;
     height: 36px;
-    text-align: center;
+    text-align: center; 
 }
-button:hover {
-    border: 1px solid #dadce0;
-}
-
 
 
 
@@ -94,53 +104,47 @@ div.yt {
     padding: 16px;
     text-align: center;
 }
+
 img.ytpic {
     width: 36px;
     height: 25px;
     vertical-align: middle;
 }
+
 a.yt {
-    color: #1a0dab;
+    color: #70757a;
     text-decoration: none;
 }
-
-
-
-
-
-
 
 
 div.bottom-nav {
     display: flex;
-    flex-wrap: wrap;
-    background: #f2f2f2;
-    color: #70757a;
+    background: #b61a1a;
+    color: #0080ff;
+    margin: auto;
+    padding: 100px;
+    text-align: center;
+    
+}
+
+
+div.enviromessage {
+    display: block;         /* setting an element to a block element helps align the element and the text*/
+    background: #ca0b0b;
     margin: auto;
     padding: 20px;
     text-align: center;
-/* make it span the whole page, if vertical it's height: 100%; */
-    width: 100%; 
-    justify-content: center;
-
-
 }
+
+
 
 
 a.bottomn {
+    background: #f2f2f2;
     color: #70757a;
     text-decoration: none;
-    padding: 20px;
+    text-transform: capitalize;
 }
-div.bottom4 {
-    padding: 20px;
-
-}
-a.enviro {
-   color: #70757a;
-   text-decoration: none;
-}
-
 
 
 
