@@ -4,10 +4,10 @@ html {
     font-family: arial, sans-serif;
 }
 
-
 div.topnav {
-    display: inline;
-}
+    display: inline-block;
+    vertical-align: middle;
+} 
 a.leftnav {
     color: #222;
     text-decoration: none;
@@ -21,6 +21,7 @@ a.rightnav {
 }
 ul {
     display: flex;
+    justify-content: space-between;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -29,6 +30,8 @@ ul:hover {
     text-decoration: underline;
 }
 svg.gdots {
+    display: inline-block;
+    vertical-align: middle;
     fill: #5f6368;
 }
 svg.gdots:hover {
@@ -42,21 +45,25 @@ svg.gdots:hover {
 div.body {
     display: flex;
     flex-direction: column;
-    align-items: center; /* this might be interfering with 'mag' */
+    justify-content: center;
+    align-items: center; 
 }
 img.logo {
     padding: 25px; 
 }
-svg.mag {
-    display: flex;
-    fill: #9aa0a6; /* color didn't change the color for this SVG art but fill works */
-    width: 20px;
-    height: 20px;
-}
-div.search-bar {
+
+div.searchContainer {
+    display: inline-block;
     background: #fff;
     height: 50px; 
 
+}
+img.mag {
+    display: inline-block;
+    position: sticky;
+    left: 250px;
+    vertical-align: middle;
+    height: 30px;    
 }
 input#searchbar {
     padding: 10px;
@@ -68,7 +75,7 @@ input#searchbar:hover {
     box-shadow: 0 1px 6px rgba(32,33,36,.28);
 }
 button {
-    position: relative;
+    display: inline-block;
     background-color: #f8f9fa;
     border: 1px solid #f8f9fa;
     border-radius: 5px;
@@ -91,8 +98,9 @@ button:hover {
 div.yt {
     display: block;
     margin: auto;
-    padding: 16px;
+    padding: 5px;
     text-align: center;
+    margin: auto;
 }
 img.ytpic {
     width: 36px;
@@ -110,12 +118,11 @@ a.yt {
 
 
 
-
-div.bottom-nav {
+/* this is flex version, updating to grid version 
+div.bottom-nav-container {
     display: flex;
     flex-wrap: wrap;
     position: fixed;
-    /* make it span the whole page, if vertical it's height: 100%; */
     width: 100%; 
     bottom: 0;
     background: #f2f2f2;
@@ -123,50 +130,189 @@ div.bottom-nav {
     margin: auto;
     padding: 20px;
     text-align: center;
-
     justify-content: center;
+} */
 
-
-}
-
-div.bottom-nav {
-
-    
+div.bottom-nav-container{
+    display: grid;
+    grid-template-columns: 100px 100px 150px 350px 100px 100px 100px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background: #f2f2f2;
+    padding: 10px;
+    justify-content: center;
+    text-align: center;
+    vertical-align: middle;
 }
 a.bottom1 {
     color: #70757a;
     text-decoration: none;
-    padding: 10px;
+    padding: 5px;
 }
 a.bottom2 {
     color: #70757a;
     text-decoration: none;
-    padding: 10px;
+    padding: 5px;
 }
 a.bottom3 {
     color: #70757a;
     text-decoration: none;
-    padding: 10px;
+    padding: 5px;
 }
 a.bottom4 {
     color: #70757a;
     text-decoration: none;
-    padding: 10px;
+    padding: 5px;
 }
 a.bottom5 {
     color: #70757a;
     text-decoration: none;
-    padding: 10px;
+    padding: 5px;
 }
 a.bottom6 {
     color: #70757a;
     text-decoration: none;
-    padding: 10px;
+    padding: 5px;
 }
 a.bottom7 {
     color: #70757a;
     text-decoration: none;
-    padding: 10px;
+    padding: 5px;
 }
 
 
+@media all and (max-width: 1200px) {
+    div.bottom-nav-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 150px 1fr 1fr 1fr;
+        grid-template-rows: 35px 35px;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        background: #f2f2f2;
+        padding: 10px;
+        justify-content: center;
+        text-align: center;
+        vertical-align: middle;
+    }
+}
+@media all and (max-width: 1200px) {
+    div.bottom1 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        padding: 5px;
+    }
+    div.bottom2 {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        padding: 5px;
+    }
+    div.bottom3 {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 3;    
+        padding: 5px;
+    }
+    div.bottom4 {
+        grid-column-start: 1;
+        grid-column-end: 7;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        padding: 5px;
+    }
+    div.bottom5 {
+        grid-column-start: 4;
+        grid-column-end: 5;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        padding: 5px;
+    }
+    div.bottom6 {
+        grid-column-start: 5;
+        grid-column-end: 6;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        padding: 5px;
+    }
+    div.bottom7 {
+        grid-column-start: 6;
+        grid-column-end: 7;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        padding: 5px;
+    }
+}
+
+@media all and (max-width: 800px) {
+    div.bottom-nav-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 35px 35px 35px;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        background: #f2f2f2;
+        padding: 10px;
+        justify-content: center;
+        text-align: center;
+        vertical-align: middle;
+    }
+}
+@media all and (max-width: 800px) {
+    div.bottom1 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        padding: 5px;
+
+    }
+    div.bottom2 {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        padding: 5px;
+    }
+    div.bottom3 {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        padding: 5px;
+    }
+    div.bottom4 {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        padding: 5px;
+    }
+    div.bottom5 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        padding: 5px;
+    }
+    div.bottom6 {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        padding: 5px;
+    }
+    div.bottom7 {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        padding: 5px;
+    }
+}
