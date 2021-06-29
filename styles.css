@@ -114,34 +114,56 @@ a.yt {
 div.bottom-nav {
     display: flex;
     flex-wrap: wrap;
+    position: fixed;
+    /* make it span the whole page, if vertical it's height: 100%; */
+    width: 100%; 
+    bottom: 0;
     background: #f2f2f2;
     color: #70757a;
     margin: auto;
     padding: 20px;
     text-align: center;
-/* make it span the whole page, if vertical it's height: 100%; */
-    width: 100%; 
+
     justify-content: center;
 
 
 }
 
 
-a.bottomn {
+a.bottom1 {
     color: #70757a;
     text-decoration: none;
-    padding: 20px;
+    padding: 10px;
 }
-div.bottom4 {
-    padding: 20px;
-
+a.bottom2 {
+    color: #70757a;
+    text-decoration: none;
+    padding: 10px;
 }
-a.enviro {
-   color: #70757a;
-   text-decoration: none;
+a.bottom3 {
+    color: #70757a;
+    text-decoration: none;
+    padding: 10px;
 }
-
-
-
+a.bottom4 {
+    color: #70757a;
+    text-decoration: none;
+    padding: 10px;
+}
+a.bottom5 {
+    color: #70757a;
+    text-decoration: none;
+    padding: 10px;
+}
+a.bottom6 {
+    color: #70757a;
+    text-decoration: none;
+    padding: 10px;
+}
+a.bottom7 {
+    color: #70757a;
+    text-decoration: none;
+    padding: 10px;
+}
 
 
