@@ -71,7 +71,7 @@ input.searchbar {
     width: 550px;
     line-height: 20px;
 }
-input#searchbar:hover {
+input.searchbar:hover {
     box-shadow: 0 1px 6px rgba(32,33,36,.28);
 }
 img.mag {
