@@ -60,6 +60,7 @@ img.logo {
 }
 div.searchContainer {
     display: flex;
+    position: relative; /* set container to relative and element within to absolute for absolute position to be relative to outer container */
     background: #fff;
     height: 50px; 
 }
@@ -74,10 +75,10 @@ input#searchbar:hover {
     box-shadow: 0 1px 6px rgba(32,33,36,.28);
 }
 img.mag {
-    position: absolute;
+    position: absolute; /* items with absolute position should be inside a block element with position: relative to maintain position upon resizing */
     width: 30px;
-    left: 145px;
-    top: 280px;
+    left: 8px;
+    top: 7px;
 }
 button {
     display: inline-block;
