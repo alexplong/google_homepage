@@ -1,44 +1,56 @@
-html {
-    background: #fff;
+* {
+    /*background: #fff; removing because interferes with bottom nav color boxes */
     font-size: 14px;
     font-family: arial, sans-serif;
+    box-sizing: content-box; /* makes styling boxes easier */
 }
 
-div.topnav {
-    display: inline-block;
-    vertical-align: middle;
-} 
-a.leftnav {
-    color: #222;
-    text-decoration: none;
-    text-transform: capitalize;
-
-}
-a.rightnav {
-    color: #222;
-    text-decoration: none;
-    text-transform: capitalize;
-}
-ul {
-    display: flex;
-    justify-content: space-between;
-    list-style-type: none;
+body {
     margin: 0;
     padding: 0;
 }
+
+.topnavBar {
+    display: 
+    width: 100%;
+
+}
+div.topnavContainer {
+}
+ul { 
+    list-style-type: none;
+
+}
 ul:hover {
+    display: flex;
+    flex-direction: row;
+    
     text-decoration: underline;
 }
+li {
+    display: flex;
+    flex-direction: row;
+    
+}
 svg.gdots {
-    display: inline-block;
-    vertical-align: middle;
     fill: #5f6368;
 }
 svg.gdots:hover {
     background: #f2f2f2;
 }
-
-
+a.topnav {
+    color: #222;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+.thumbnail {
+    padding: 2px; /* adds first white circle around icon */
+    border: double 2px transparent; 
+    border-radius: 50%;
+    background-image: linear-gradient(white, white), radial-gradient(circle at left, #fbbc05 ,#ea4335 ,#4285f4 ,#34a853 ); /* adds the gradient around padding */
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+}
 
 
 
@@ -53,7 +65,7 @@ img.logo {
 }
 
 div.searchContainer {
-    display: inline-block;
+    display: flex;
     background: #fff;
     height: 50px; 
 
@@ -133,12 +145,13 @@ div.bottom-nav-container {
     justify-content: center;
 } */
 
-div.bottom-nav-container{
+.bottom-nav-container{
     display: grid;
     grid-template-columns: 100px 100px 150px 350px 100px 100px 100px;
     width: 100%;
     position: fixed;
     bottom: 0;
+    background-color: #f2f2f2;
     background: #f2f2f2;
     padding: 10px;
     justify-content: center;
@@ -147,36 +160,43 @@ div.bottom-nav-container{
 }
 a.bottom1 {
     color: #70757a;
+    background: #f2f2f2;
     text-decoration: none;
     padding: 5px;
 }
 a.bottom2 {
     color: #70757a;
+    background: #f2f2f2;
     text-decoration: none;
     padding: 5px;
 }
 a.bottom3 {
     color: #70757a;
+    background: #f2f2f2;
     text-decoration: none;
     padding: 5px;
 }
 a.bottom4 {
     color: #70757a;
+    background: #f2f2f2;
     text-decoration: none;
     padding: 5px;
 }
 a.bottom5 {
     color: #70757a;
+    background: #f2f2f2;
     text-decoration: none;
     padding: 5px;
 }
 a.bottom6 {
     color: #70757a;
+    background: #f2f2f2;
     text-decoration: none;
     padding: 5px;
 }
 a.bottom7 {
     color: #70757a;
+    background: #f2f2f2;
     text-decoration: none;
     padding: 5px;
 }
@@ -192,6 +212,7 @@ a.bottom7 {
         bottom: 0;
         background: #f2f2f2;
         padding: 10px;
+        color: #f2f2f2;
         justify-content: center;
         text-align: center;
         vertical-align: middle;
