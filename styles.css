@@ -2,7 +2,7 @@
     /*background: #fff; removing because interferes with bottom nav color boxes */
     font-size: 14px;
     font-family: arial, sans-serif;
-    box-sizing: content-box; /* makes styling boxes easier */
+    box-sizing: border-box; /* makes styling boxes easier */
 }
 
 body {
@@ -10,27 +10,19 @@ body {
     padding: 0;
 }
 
-.topnavBar {
-    display: 
-    width: 100%;
-
-}
-div.topnavContainer {
-}
 ul { 
+    display: flex; /* !!! important for navBar !!! */
+    flex-direction: row;
+    justify-content: flex-start;
     list-style-type: none;
+    align-items: center; /* align easily with flex support! */
 
+}    
+li.left + li.right {
+    margin-left: auto;
 }
-ul:hover {
-    display: flex;
-    flex-direction: row;
-    
-    text-decoration: underline;
-}
-li {
-    display: flex;
-    flex-direction: row;
-    
+li:hover {
+    text-decoration: underline;    
 }
 svg.gdots {
     fill: #5f6368;
@@ -39,9 +31,12 @@ svg.gdots:hover {
     background: #f2f2f2;
 }
 a.topnav {
+    display: block;
     color: #222;
+    text-align: center;
     text-decoration: none;
     text-transform: capitalize;
+    padding: 5px;
 }
 .thumbnail {
     padding: 2px; /* adds first white circle around icon */
@@ -61,30 +56,28 @@ div.body {
     align-items: center; 
 }
 img.logo {
-    padding: 25px; 
+    padding: 50px; 
 }
-
 div.searchContainer {
     display: flex;
     background: #fff;
     height: 50px; 
-
 }
-img.mag {
-    display: inline-block;
-    position: sticky;
-    left: 250px;
-    vertical-align: middle;
-    height: 30px;    
-}
-input#searchbar {
+input.searchbar {
     padding: 10px;
     border: 1px solid #dfe1e5;
     border-radius: 25px;
     width: 550px;
+    line-height: 20px;
 }
 input#searchbar:hover {
     box-shadow: 0 1px 6px rgba(32,33,36,.28);
+}
+img.mag {
+    position: absolute;
+    width: 30px;
+    left: 145px;
+    top: 280px;
 }
 button {
     display: inline-block;
